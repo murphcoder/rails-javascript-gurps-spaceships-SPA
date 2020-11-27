@@ -1,0 +1,2 @@
+class SpaceshipSwitchesController < ApplicationController
+end

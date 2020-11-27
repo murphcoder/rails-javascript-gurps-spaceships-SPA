@@ -1,0 +1,2 @@
+class SwitchesController < ApplicationController
+end

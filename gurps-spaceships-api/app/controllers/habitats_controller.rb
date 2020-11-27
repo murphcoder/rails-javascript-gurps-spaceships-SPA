@@ -1,0 +1,2 @@
+class HabitatsController < ApplicationController
+end

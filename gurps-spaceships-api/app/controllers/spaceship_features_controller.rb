@@ -1,0 +1,2 @@
+class SpaceshipFeaturesController < ApplicationController
+end
