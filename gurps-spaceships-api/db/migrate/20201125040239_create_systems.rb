@@ -3,7 +3,7 @@ class CreateSystems < ActiveRecord::Migration[6.0]
     create_table :systems do |t|
       t.string :name
       t.integer :tech_level
-      t.string :location, :default => "any"
+      t.string :hull_placement, :default => "any"
       t.text :description
       t.text :modifiers
       t.integer :size_min, :default => 5

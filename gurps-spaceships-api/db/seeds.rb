@@ -10,7 +10,7 @@ systems = [
     {
         name: "Armor, Ice",
         tech_level: 0, 
-        location: "hull", 
+        hull_placement: "hull", 
         modifiers: {
             us_ddr: {8 => 1, 9 => 2, 10 => 2, 11 => 3, 12 => 5, 13 => 7, 14 => 10, 15 => 15}
         },
@@ -21,7 +21,7 @@ systems = [
     {
         name: "Armor, Stone",
         tech_level: 0,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {7 => 1, 8 => 2, 9 => 2, 10 => 3, 11 => 5, 12 => 7, 13 => 10, 14 => 15, 15 => 20}
         },
@@ -32,7 +32,7 @@ systems = [
     {
         name: "Armor, Steel",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 1, 6 => 2, 7 => 3, 8 => 5, 9 => 7, 10 => 10, 11 => 15, 12 => 20, 13 => 30, 14 => 50, 15 => 70},
             sl_ddr: {6 => 1, 7 => 2, 8 => 3, 9 => 5, 10 => 7, 11 => 10, 12 => 15, 13 => 20, 14 => 30, 15 => 50}
@@ -44,7 +44,7 @@ systems = [
     {
         name: "Armor, Light Alloy",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 2, 6 => 3, 7 => 5, 8 => 7, 9 => 10, 10 => 15, 11 => 20, 12 => 30, 13 => 50, 14 => 70, 15 => 100},
             sl_ddr: {5 => 1, 6 => 2, 7 => 3, 8 => 5, 9 => 7, 10 => 10, 11 => 15, 12 => 20, 13 => 30, 14 => 50, 15 => 70}
@@ -56,7 +56,7 @@ systems = [
     {
         name: "Armor, Metallic Laminate",
         tech_level: 8,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 3, 6 => 5, 7 => 7, 8 => 10, 9 => 15, 10 => 20, 11 => 30, 12 => 50, 13 => 70, 14 => 100, 15 => 150},
             sl_ddr: {5 => 2, 6 => 3, 7 => 5, 8 => 7, 9 => 10, 10 => 15, 11 => 20, 12 => 30, 13 => 50, 14 => 70, 15 => 100}
@@ -68,7 +68,7 @@ systems = [
     {
         name: "Armor, Advanced Metallic Laminate",
         tech_level: 9,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 5, 6 => 7, 7 => 10, 8 => 15, 9 => 20, 10 => 30, 11 => 50, 12 => 70, 13 => 100, 14 => 150, 15 => 200},
             sl_ddr: {5 => 3, 6 => 5, 7 => 7, 8 => 10, 9 => 15, 10 => 20, 11 => 30, 12 => 50, 13 => 70, 14 => 100, 15 => 150}
@@ -80,7 +80,7 @@ systems = [
     {
         name: "Armor, Nanocomposite",
         tech_level: 10,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 7, 6 => 10, 7 => 15, 8 => 20, 9 => 30, 10 => 50, 11 => 70, 12 => 100, 13 => 150, 14 => 200, 15 => 300},
             sl_ddr: {5 => 5, 6 => 7, 7 => 10, 8 => 15, 9 => 20, 10 => 30, 11 => 50, 12 => 70, 13 => 100, 14 => 150, 15 => 200}
@@ -92,7 +92,7 @@ systems = [
     {
         name: "Armor, Organic",
         tech_level: 10,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 2, 6 => 3, 7 => 5, 8 => 7, 9 => 10, 10 => 15, 11 => 20, 12 => 30, 13 => 50, 14 => 70, 15 => 100},
             sl_ddr: {5 => 1, 6 => 2, 7 => 3, 8 => 5, 9 => 7, 10 => 10, 11 => 15, 12 => 20, 13 => 30, 14 => 50, 15 => 70}
@@ -104,7 +104,7 @@ systems = [
     {
         name: "Armor, Diamondoid",
         tech_level: 11,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 10, 6 => 15, 7 => 20, 8 => 30, 9 => 50, 10 => 70, 11 => 100, 12 => 150, 13 => 200, 14 => 300, 15 => 500},
             sl_ddr: {5 => 7, 6 => 10, 7 => 15, 8 => 20, 9 => 30, 10 => 50, 11 => 70, 12 => 100, 13 => 150, 14 => 200, 15 => 300}
@@ -116,7 +116,7 @@ systems = [
     {
         name: "Armor, Exotic Laminate",
         tech_level: 12,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {
             us_ddr: {5 => 15, 6 => 20, 7 => 30, 8 => 50, 9 => 70, 10 => 100, 11 => 150, 12 => 200, 13 => 300, 14 => 500, 15 => 700},
             sl_ddr: {5 => 10, 6 => 15, 7 => 20, 8 => 30, 9 => 50, 10 => 70, 11 => 100, 12 => 150, 13 => 200, 14 => 300, 15 => 500}
@@ -179,7 +179,7 @@ systems = [
     {
         name: "Enhanced Array",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {comm_sensor_bonus: 2},
         description: "A larger and more capable version of the basic array that comes with a control room system.",
         cost: {5 => 60000, 6 => 200000}
@@ -188,7 +188,7 @@ systems = [
     {
         name: "Science Array",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {comm_sensor_bonus: 2},
         description: "Incorporates highly sensitive instruments for use in astronomical and physics surveys, as well as the same equipment as an enhanced array.",
         cost: {5 => 300000, 6 => 1000000}
@@ -197,7 +197,7 @@ systems = [
     {
         name: "Tactical Array",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {comm_sensor_bonus: 2},
         description: "Has the same capabilities as an enhanced array, but adds the ability to actively jam transmissions and overcome defensive ECM.",
         cost: {5 => 300000, 6 => 1000000}
@@ -206,7 +206,7 @@ systems = [
     {
         name: "Multipurpose Array",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {comm_sensor_bonus: 2},
         description: "Combines science and tactical array functions.",
         cost: {5 => 600000, 6 => 2000000}
@@ -215,7 +215,7 @@ systems = [
     {
         name: "External Clamp",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {clamp: true},
         description: "This is a system of clamps or grapples that allows the vessel to attach itself to another spacecraft or object that the vessel has rendezvoused with. Attachment takes at least 20 seconds; the subject must be cooperative or drifting. A clamped space- craft can be towed or pushed. To determine performance, calculate the tons of thrust. A vessel’s tons of thrust are equal to its acceleration (or FTL rating) times its mass. If it pulls or pushes a vessel or other heavy object (such as an asteroid) divide by their combined mass to get the new acceleration or rating. The two vessels may also combine their acceleration or FTL ratings: add their thrust or FTL rating together before dividing by combined mass.",
         cost: {5 => 3000, 6 => 10000}
@@ -329,7 +329,7 @@ systems = [
     {
         name: "Jet Engine",
         tech_level: 7,
-        location: "rear",
+        hull_placement: "rear",
         modifiers: {atmospheric_thrust: 1},
         description: "This is a turbo ramjet or scramjet engine that functions only in an atmosphere containing oxygen with at least 0.1 atmos- pheres pressure. Each jet engine provides 1G acceleration for calculating atmospheric speed, and consumes one fuel tank worth of jet fuel per half-hour (TL7) or hour (TL8+). Use Piloting (Aerospace) skill to control the vessel when flying in atmosphere.",
         cost: {5 => 300000, 6 => 1000000}
@@ -338,7 +338,7 @@ systems = [
     {
         name: "Jump Gate",
         superscience: true,
-        location: "hull",
+        hull_placement: "hull",
         high_energy: 1,
         modifiers: {jump_capacity: {9 => 100, 10 => 300}},
         description: "This is one side of an artificial wormhole portal that connects to another distant jump gate, usually permitting instant FTL transit. This may be a prerequisite for, or alternative to, stardrive engines. The table shows maximum tonnage that can pass through the gate at any one time. Multiple systems installed in the same hull section may combine capacity.",
@@ -449,7 +449,7 @@ systems = [
 
     {
         name: "Ramscoop",
-        location: "front",
+        hull_placement: "front",
         tech_level: 10,
         modifiers: {ramscoop: true},
         description: "An electromagnetic scoop intended to capture interstellar hydrogen molecules for fuel and reaction mass. At 1,800 mps or more, one Ramscoop system provides unlimited reaction mass for one drive system: antimatter plasma rocket, antimatter plasma torch, super antimatter plasma torch, fusion rocket, fusion torch, super fusion torch, total conver- sion torch, or super conversion torch. Each ramscoop requires one Power Point to power up, but no power to maintain.",
@@ -458,7 +458,7 @@ systems = [
 
     {
         name: "Reaction Engine, Chemical Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 7,
         modifiers: {thrust: {any: 3.0}},
         suppliable: true,
@@ -470,7 +470,7 @@ systems = [
 
     {
         name: "Reaction Engine, HEDM Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {any: 2.0}},
         volatile: true,
@@ -483,7 +483,7 @@ systems = [
 
     {
         name: "Reaction Engine, Ion Drive",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 8,
         modifiers: {thrust: {any: 0.0005}},
         suppliable: true,
@@ -496,7 +496,7 @@ systems = [
 
     {
         name: "Reaction Engine, Mass Driver",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {any: 0.01}},
         suppliable: true,
@@ -509,7 +509,7 @@ systems = [
 
     {
         name: "Reaction Engine, Nuclear Thermal Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 7,
         modifiers: {thrust: {7 => 0.1, 8 => 0.2, 9 => 0.5}},
         suppliable: true,
@@ -521,7 +521,7 @@ systems = [
 
     {
         name: "Reaction Engine, Nuclear Light Bulb",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {9 => 0.01, 10 => 0.05}},
         suppliable: true,
@@ -533,7 +533,7 @@ systems = [
 
     {
         name: "Reaction Engine, Nuclear Saltwater Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         superscience: true,
         volatile: true,
@@ -547,7 +547,7 @@ systems = [
 
     {
         name: "Reaction Engine, External Pulsed Plasma",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 7,
         modifiers: {thrust: {any: 2.0}},
         suppliable: true,
@@ -559,7 +559,7 @@ systems = [
 
     {
         name: "Reaction Engine, Fusion Pulse Drive",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {9 => 0.02, 10 => 0.05}},
         suppliable: true,
@@ -571,7 +571,7 @@ systems = [
 
     {
         name: "Reaction Engine, Advanced Fusion Pulse Drive",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {any: 0.005}},
         suppliable: true,
@@ -583,7 +583,7 @@ systems = [
 
     {
         name: "Reaction Engine, Super Fusion Pulse Drive",
-        location: "rear",
+        hull_placement: "rear",
         superscience: true,
         tech_level: 11,
         modifiers: {thrust: {11 => 20.0, 12 => 100}},
@@ -596,7 +596,7 @@ systems = [
 
     {
         name: "Reaction Engine, Fusion Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {any: 0.005}},
         suppliable: true,
@@ -608,7 +608,7 @@ systems = [
 
     {
         name: "Reaction Engine, Fusion Torch",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 10,
         superscience: true,
         modifiers: {thrust: {any: 0.5}},
@@ -621,7 +621,7 @@ systems = [
 
     {
         name: "Reaction Engine, Super Fusion Torch",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 11,
         superscience: true,
         modifiers: {thrust: {any: 50.0}},
@@ -634,7 +634,7 @@ systems = [
 
     {
         name: "Reaction Engine, Antimatter Thermal Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 9,
         modifiers: {thrust: {9 => 0.1, 10 => 0.2, 11 => 0.4}},
         suppliable: true,
@@ -647,7 +647,7 @@ systems = [
 
     {
         name: "Reaction Engine, Antimatter Plasma Rocket",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 10,
         modifiers: {thrust: {any: 0.01}},
         suppliable: true,
@@ -660,7 +660,7 @@ systems = [
 
     {
         name: "Reaction Engine, Antimatter Plasma Torch",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 10,
         modifiers: {thrust: {any: 1.0}},
         suppliable: true,
@@ -674,7 +674,7 @@ systems = [
 
     {
         name: "Reaction Engine, Antimatter Pion",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 11,
         modifiers: {thrust: {any: 0.005}},
         suppliable: true,
@@ -687,7 +687,7 @@ systems = [
 
     {
         name: "Reaction Engine, Antimatter Pion Torch",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 11,
         modifiers: {thrust: {any: 0.1}},
         suppliable: true,
@@ -701,7 +701,7 @@ systems = [
 
     {
         name: "Reaction Engine, Total Conversion Torch",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 12,
         modifiers: {thrust: {any: 1.0}},
         suppliable: true,
@@ -715,7 +715,7 @@ systems = [
 
     {
         name: "Reaction Engine, Super Conversion Torch",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 12,
         modifiers: {thrust: {any: 50.0}},
         suppliable: true,
@@ -729,7 +729,7 @@ systems = [
 
     {
         name: "Reactionless Engine, Dean Drive",
-        location: "rear or center",
+        hull_placement: "rear or center",
         tech_level: 7,
         modifiers: {thrust: {any: 0.1}},
         superscience: true,
@@ -740,7 +740,7 @@ systems = [
 
     {
         name: "Reactionless Engine, Standard",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 10,
         modifiers: {thrust: {10 => 0.5, 11 => 1.0}},
         superscience: true,
@@ -751,7 +751,7 @@ systems = [
 
     {
         name: "Reactionless Engine, Hot",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 10,
         modifiers: {thrust: {10 => 1.0, 11 => 2.0}},
         superscience: true,
@@ -762,7 +762,7 @@ systems = [
 
     {
         name: "Reactionless Engine, Super",
-        location: "rear",
+        hull_placement: "rear",
         tech_level: 11,
         modifiers: {thrust: {11 => 50.0, 12 => 100.0}},
         superscience: true,
@@ -773,7 +773,7 @@ systems = [
 
     {
         name: "Reactionless Engine, Subwarp",
-        location: "rear",
+        hull_placement: "rear",
         modifiers: {thrust: {any: 500.0}},
         superscience: true,
         high_energy: 1,
@@ -784,7 +784,7 @@ systems = [
     {
         name: "Robot Arm",
         tech_level: 8,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {arm: true},
         description: "This system is a hand- or gripper-equipped arm, proportionately sized to the spacecraft, that can grab and manipulate spacecraft or other objects using the vessel’s ST. A robot arm can also function as an external clamp.",
         cost: {5 => 300000, 6 => 1000000}
@@ -793,7 +793,7 @@ systems = [
     {
         name: "Soft-Landing System",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {soft_landing: true},
         description: "A reentry shield, airbags, or parachutes designed to allow a vessel that lacks wings, thrust, or contragravity to safely land from low orbit. The system is deploys automatically and is destroyed after landing – it must be replaced each time it’s used.",
         cost: {5 => 50000, 6 => 100000}
@@ -802,7 +802,7 @@ systems = [
     {
         name: "Solar Panel Array",
         tech_level: 7,
-        location: "hull",
+        hull_placement: "hull",
         power_points: 1,
         description: "A solar power system. If exposed to sunlight it generates one Power Point. A solar panel array is an exposed system and is not protected by spacecraft armor!",
         cost: {5 => 150000, 6 => 500000}
@@ -811,7 +811,7 @@ systems = [
     {
         name: "Lightsail",
         tech_level: 9,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {thrust: {any: 0.0001}},
         description: "This solar sail generates thrust from starlight (or a battery of launching lasers). Typical thrust in our inner solar system (at 1 AU from a Sol-type star) is 0.0001G per lightsail system. Thrust is affected by distance from the star: divide it by the square of the average distance. For stars with different luminosity than our own sun, multiply by relative luminosity.",
         cost: {5 => 300000, 6 => 1000000},
@@ -821,7 +821,7 @@ systems = [
     {
         name: "Magsail",
         tech_level: 9,
-        location: "hull",
+        hull_placement: "hull",
         modifiers: {thrust: {any: 0.001}},
         description: "A huge superconducting loop mounted in front of the spacecraft that interacts with charged particles from a star’s solar wind to generate thrust. It won’t provide acceleration far from a star (in interstellar space) but can also be used for deceleration by starships traveling through interstellar space at velocities beyond their top speed. Typical thrust is 0.001G per magsail system. Top speed cannot exceed 375 mps. A magsail requires one Power Point to activate, but no power to maintain once powered.",
         cost: {5 => 300000, 6 => 1000000},
@@ -857,6 +857,7 @@ systems = [
 
     {
         name: "Weapons Battery, Major",
+        hull_placement: "hull",
         modifiers: {weapons: 1},
         description: "This is a single mount for a powerful weapon. It also includes targeting systems for aiming the battery’s weapons once the vessel’s array has detected a target.",
         cost: {5 => 150000, 6 => 600000}
@@ -864,6 +865,7 @@ systems = [
 
     {
         name: "Weapons Battery, Medium",
+        hull_placement: "hull",
         modifiers: {weapons: 3},
         description: "Uses the same rules as a major battery but the weapons are less powerful and there may be up to three fixed or turrets mount weapons in the battery. It is possible to mix weapon types in the battery.",
         cost: {5 => 150000, 6 => 600000}
@@ -871,6 +873,7 @@ systems = [
 
     {
         name: "Weapons Battery, Secondary",
+        hull_placement: "hull",
         modifiers: {weapons: 10},
         description: "Uses the same rules as a major battery except the weapons are less powerful and there may be a mix of up to 10 fixed or turret mounted weapons in the battery.",
         cost: {5 => 150000, 6 => 600000}
@@ -878,6 +881,7 @@ systems = [
 
     {
         name: "Weapons Battery, Tertiary",
+        hull_placement: "hull",
         modifiers: {weapons: 30},
         description: "Uses the same rules as a secondary battery except the weapons are less powerful and there may be any mix of up to 30 fixed or turret mounted weapons in the battery.",
         cost: {5 => 150000, 6 => 600000}
@@ -1246,6 +1250,12 @@ weapons = [
         tech_level: 11,
         superscience: true,
         description: "These fire similar missiles, but accelerate them to relativistic pseudo-velocities using an internal warp field accelerator, allowing the missile to reach distant targets nearly instantly. They are high-energy systems."
+    },
+
+    {
+        name: "Cargo",
+        kind: "cargo",
+        description: "An empty weapon section converted into a cargo hold."
     }
 
 ]

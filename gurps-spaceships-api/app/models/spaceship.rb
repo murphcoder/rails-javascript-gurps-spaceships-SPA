@@ -5,10 +5,12 @@ class Spaceship < ApplicationRecord
     has_many :spaceship_switches
     has_many :features, through: :spaceship_features
     has_many :switches, through: :spaceship_switches
-    has_many :systems, through: :hulls
-    accepts_nested_values_for :hulls
-    accepts_nested_values_for :spaceship_features
-    accepts_nested_values_for :spaceship_switches
+    has_many :placements, through: :hulls
+    has_many :weapon_mounts, through: :placements
+    has_many :habitat_spaces, through: :placements
+    accepts_nested_attributes_for :hulls
+    accepts_nested_attributes_for :spaceship_features
+    accepts_nested_attributes_for :spaceship_switches
 
     def front
         self.hulls.select {|hull| hull.section == "front"}.first

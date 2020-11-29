@@ -1,2 +1,0 @@
-class PlacementsController < ApplicationController
-end

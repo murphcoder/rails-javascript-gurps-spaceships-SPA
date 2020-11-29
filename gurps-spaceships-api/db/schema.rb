@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_27_091042) do
+ActiveRecord::Schema.define(version: 2020_11_29_083411) do
 
   create_table "features", force: :cascade do |t|
     t.string "name"
@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
   end
 
   create_table "habitat_spaces", force: :cascade do |t|
-    t.integer "weapon_id"
     t.integer "habitat_id"
+    t.integer "placement_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["habitat_id"], name: "index_habitat_spaces_on_habitat_id"
-    t.index ["weapon_id"], name: "index_habitat_spaces_on_weapon_id"
+    t.index ["placement_id"], name: "index_habitat_spaces_on_placement_id"
   end
 
   create_table "habitats", force: :cascade do |t|
@@ -55,14 +55,13 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
   end
 
   create_table "placements", force: :cascade do |t|
-    t.integer "section"
+    t.integer "location"
     t.integer "hull_id"
     t.integer "system_id"
-    t.integer "supplies_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "fuel"
     t.index ["hull_id"], name: "index_placements_on_hull_id"
-    t.index ["supplies_id"], name: "index_placements_on_supplies_id"
     t.index ["system_id"], name: "index_placements_on_system_id"
   end
 
@@ -89,6 +88,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
     t.integer "tech_level"
     t.integer "size"
     t.boolean "streamlined"
+    t.boolean "superscience"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
   create_table "systems", force: :cascade do |t|
     t.string "name"
     t.integer "tech_level"
-    t.string "location", default: "any"
+    t.string "hull_placement", default: "any"
     t.text "description"
     t.text "modifiers"
     t.integer "size_min", default: 5
@@ -134,11 +134,11 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
   create_table "weapon_mounts", force: :cascade do |t|
     t.integer "weapon_id"
-    t.integer "habitat_id"
-    t.string "type"
+    t.integer "placement_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["habitat_id"], name: "index_weapon_mounts_on_habitat_id"
+    t.string "kind"
+    t.index ["placement_id"], name: "index_weapon_mounts_on_placement_id"
     t.index ["weapon_id"], name: "index_weapon_mounts_on_weapon_id"
   end
 

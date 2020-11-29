@@ -1,2 +1,0 @@
-class HullsController < ApplicationController
-end
