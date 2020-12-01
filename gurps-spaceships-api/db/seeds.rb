@@ -342,7 +342,8 @@ systems = [
         high_energy: 1,
         modifiers: {jump_capacity: {9 => 100, 10 => 300}},
         description: "This is one side of an artificial wormhole portal that connects to another distant jump gate, usually permitting instant FTL transit. This may be a prerequisite for, or alternative to, stardrive engines. The table shows maximum tonnage that can pass through the gate at any one time. Multiple systems installed in the same hull section may combine capacity.",
-        cost: {5 => 1500000, 6 => 5000000}
+        cost: {5 => 1500000, 6 => 5000000},
+        size_min: 9
     },
 
     {

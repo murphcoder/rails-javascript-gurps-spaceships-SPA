@@ -40,8 +40,8 @@ class SpaceshipsController < ApplicationController
         params.require(:spaceship).permit(
             :name,
             :tech_level,
-            :streamlined:,
-            :superscience:,
+            :streamlined,
+            :superscience,
             :size,
             :user_id,
             spaceship_switches_attributes: [:switch_id],
@@ -62,5 +62,6 @@ class SpaceshipsController < ApplicationController
                 ]
             ]
         )
+    end
 
 end
