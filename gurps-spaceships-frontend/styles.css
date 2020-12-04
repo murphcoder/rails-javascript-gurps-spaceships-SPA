@@ -1,0 +1,29 @@
+h1, h2 {
+    text-align: center;
+}
+
+div.ship {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin: 20px;
+  }
+  
+div.card {
+    background-color: #eeeeee;
+    box-shadow: 10px 10px grey;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+table {
+    margin-left: 40px;
+}
+
+table td {
+    text-align: right;
+}

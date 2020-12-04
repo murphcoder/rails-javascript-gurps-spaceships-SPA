@@ -16,7 +16,7 @@ class SpaceshipSerializer
                             },
                             :except => [:created_at, :updated_at]
                         }
-                    }, :only => [:section]
+                    }, :except => [:created_at, :updated_at]
                 }, 
                 :features => {:only => [:id]}, :switches => {:only => [:id]}
             }

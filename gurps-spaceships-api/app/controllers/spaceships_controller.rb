@@ -1,8 +1,7 @@
 class SpaceshipsController < ApplicationController
 
     def index
-        user = User.find(params[:user_id])
-        spaceships = user.spaceships
+        spaceships = Spaceship.all
         render json: spaceships.to_json(only: [:id, :name, :superscience, :tech_level, :created_at, :updated_at])
     end
 
@@ -12,6 +11,7 @@ class SpaceshipsController < ApplicationController
     end
 
     def create
+        binding.pry
         spaceship = Spaceship.create(spaceship_params)
         render json: SpaceshipSerializer.new(spaceship).serialized_json
     end
@@ -38,30 +38,37 @@ class SpaceshipsController < ApplicationController
 
     def spaceship_params
         params.require(:spaceship).permit(
+            :id,
             :name,
             :tech_level,
             :streamlined,
             :superscience,
             :size,
-            :user_id,
-            spaceship_switches_attributes: [:switch_id],
-            spaceship_features_attributes: [:feature_id],
+            :created_at,
+            :updated_at,
+            spaceship_switches: [:switch_id],
+            spaceship_features: [:feature_id],
             hulls_attributes: [
+                :id,
                 :section,
                 placements_attributes: [
+                    :id,
                     :location,
                     :system_id,
                     :fuel,
-                    weapon_mount_attributes: [
+                    weapon_mounts_attributes: [
+                        :id,
                         :weapon_id,
-                        :kind,
+                        :kind
                     ],
                     habitat_spaces_attributes: [
-                        habitat_id
+                        :id,
+                        :habitat_id
                     ]
                 ]
             ]
         )
+    
     end
 
 end

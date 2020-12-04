@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources :switches, only: [:index, :show]
   resources :features, only: [:index, :show]
   resources :systems, only: [:index, :show]
-  resources :users do
-    resources :spaceships
-  end
+  resources :spaceships
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

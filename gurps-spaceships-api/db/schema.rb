@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_29_083411) do
+ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
   create_table "features", force: :cascade do |t|
     t.string "name"
@@ -58,9 +58,9 @@ ActiveRecord::Schema.define(version: 2020_11_29_083411) do
     t.integer "location"
     t.integer "hull_id"
     t.integer "system_id"
+    t.string "fuel"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "fuel"
     t.index ["hull_id"], name: "index_placements_on_hull_id"
     t.index ["system_id"], name: "index_placements_on_system_id"
   end
@@ -89,10 +89,8 @@ ActiveRecord::Schema.define(version: 2020_11_29_083411) do
     t.integer "size"
     t.boolean "streamlined"
     t.boolean "superscience"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_spaceships_on_user_id"
   end
 
   create_table "switches", force: :cascade do |t|
@@ -125,19 +123,12 @@ ActiveRecord::Schema.define(version: 2020_11_29_083411) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "weapon_mounts", force: :cascade do |t|
+    t.string "kind"
     t.integer "weapon_id"
     t.integer "placement_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "kind"
     t.index ["placement_id"], name: "index_weapon_mounts_on_placement_id"
     t.index ["weapon_id"], name: "index_weapon_mounts_on_weapon_id"
   end

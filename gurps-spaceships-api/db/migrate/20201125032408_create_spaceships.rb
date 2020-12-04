@@ -6,7 +6,6 @@ class CreateSpaceships < ActiveRecord::Migration[6.0]
       t.integer :size
       t.boolean :streamlined
       t.boolean :superscience
-      t.belongs_to :user
 
       t.timestamps
     end

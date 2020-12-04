@@ -4,7 +4,7 @@ class CreatePlacements < ActiveRecord::Migration[6.0]
       t.integer :location
       t.belongs_to :hull
       t.belongs_to :system
-      t.belongs_to :supplies, :class_name => "Placement", :optional => true
+      t.string :fuel
 
       t.timestamps
     end

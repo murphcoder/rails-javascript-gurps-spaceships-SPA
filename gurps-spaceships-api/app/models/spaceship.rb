@@ -1,5 +1,4 @@
 class Spaceship < ApplicationRecord
-    belongs_to :user
     has_many :hulls
     has_many :spaceship_features
     has_many :spaceship_switches
@@ -23,24 +22,6 @@ class Spaceship < ApplicationRecord
 
     def rear
         self.hulls.select {|hull| hull.section == "rear"}.first
-    end
-
-    def mods
-        arr = []
-        self.placements.each do |p|
-            p.system.modifiers.each {|key, value| arr << key}
-        end
-        arr.uniq
-    end
-
-    def mod(sym)
-        arr = []
-        self.placements.each do |p|
-            if p.system.modifiers[sym]
-                arr << p.system.modifiers[sym]
-            end
-        end
-        arr
     end
 
 end

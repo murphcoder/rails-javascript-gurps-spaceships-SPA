@@ -1263,6 +1263,221 @@ weapons = [
 
 Weapon.create(weapons)
 
+ship = Spaceship.create(
+    name: "Star Flower-class Tramp Freighter", 
+    tech_level: 11,
+    size: 8, 
+    streamlined: true,
+    superscience: true
+)
+
+front = Hull.create(
+    spaceship: ship,
+    section: "front"
+)
+
+center = Hull.create(
+    spaceship: ship,
+    section: "center"
+)
+
+rear = Hull.create(
+    spaceship: ship,
+    section: "rear"
+)
+
+front_1 = Placement.create(
+    hull: front,
+    location: 1,
+    system: System.find(5)
+)
+
+front_2 = Placement.create(
+    hull: front,
+    location: 2,
+    system: System.find(11)
+)
+
+front_3 = Placement.create(
+    hull: front,
+    location: 3,
+    system: System.find(11)
+)
+
+front_4 = Placement.create(
+    hull: front,
+    location: 4,
+    system: System.find(11)
+)
+
+front_5 = Placement.create(
+    hull: front,
+    location: 5,
+    system: System.find(11)
+)
+
+front_6 = Placement.create(
+    hull: front,
+    location: 6,
+    system: System.find(17)
+)
+
+front_core = Placement.create(
+    hull: front,
+    location: 0,
+    system: System.find(14)
+)
+
+center_1 = Placement.create(
+    hull: center,
+    location: 1,
+    system: System.find(5)
+)
+
+center_2 = Placement.create(
+    hull: center,
+    location: 2,
+    system: System.find(29)
+)
+
+habitat_c2_1 = HabitatSpace.create(
+    placement: center_2,
+    habitat: Habitat.find(2)
+)
+
+habitat_c2_2 = HabitatSpace.create(
+    placement: center_2,
+    habitat: Habitat.find(2)
+)
+
+habitat_c2_3 = HabitatSpace.create(
+    placement: center_2,
+    habitat: Habitat.find(2)
+)
+
+habitat_c2_4 = HabitatSpace.create(
+    placement: center_2,
+    habitat: Habitat.find(2)
+)
+
+habitat_c2_5 = HabitatSpace.create(
+    placement: center_2,
+    habitat: Habitat.find(2)
+)
+
+habitat_c2_6 = HabitatSpace.create(
+    placement: center_2,
+    habitat: Habitat.find(2)
+)
+
+center_3 = Placement.create(
+    hull: center,
+    location: 3,
+    system: System.find(29)
+)
+
+habitat_c3_1 = HabitatSpace.create(
+    placement: center_3,
+    habitat: Habitat.find(2)
+)
+
+habitat_c3_2 = HabitatSpace.create(
+    placement: center_3,
+    habitat: Habitat.find(2)
+)
+
+habitat_c3_3 = HabitatSpace.create(
+    placement: center_3,
+    habitat: Habitat.find(2)
+)
+
+habitat_c3_4 = HabitatSpace.create(
+    placement: center_3,
+    habitat: Habitat.find(2)
+)
+
+habitat_c3_5 = HabitatSpace.create(
+    placement: center_3,
+    habitat: Habitat.find(11)
+)
+
+habitat_c3_6 = HabitatSpace.create(
+    placement: center_3,
+    habitat: Habitat.find(11)
+)
+
+center_4 = Placement.create(
+    hull: center,
+    location: 4,
+    system: System.find(11)
+)
+
+center_5 = Placement.create(
+    hull: center,
+    location: 5,
+    system: System.find(11)
+)
+
+center_6 = Placement.create(
+    hull: center,
+    location: 6,
+    system: System.find(82)
+)
+
+weapon_1 = WeaponMount.create(
+    placement: center_6,
+    kind: "turret",
+    weapon: Weapon.find(2)
+)
+
+29.times {WeaponMount.create(placement: center_6, weapon: Weapon.find(19))}
+
+rear_1 = Placement.create(
+    hull: rear,
+    location: 1,
+    system: System.find(5)
+)
+
+rear_2 = Placement.create(
+    hull: rear,
+    location: 2,
+    system: System.find(67)
+)
+
+rear_3 = Placement.create(
+    hull: rear,
+    location: 3,
+    system: System.find(67)
+)
+
+rear_4 = Placement.create(
+    hull: rear,
+    location: 4,
+    system: System.find(76)
+)
+
+rear_5 = Placement.create(
+    hull: rear,
+    location: 5,
+    system: System.find(76)
+)
+
+rear_6 = Placement.create(
+    hull: rear,
+    location: 6,
+    system: System.find(16)
+)
+
+rear_core = Placement.create(
+    hull: rear,
+    location: 0,
+    system: System.find(40)
+)
+
+feature = SpaceshipFeature.create(
+    spaceship: ship,
+    feature: Feature.find(1)
+)
 
 
 
