@@ -7,7 +7,7 @@ class CreateHabitats < ActiveRecord::Migration[6.0]
       t.boolean :superscience, :default => false
       t.text :modifiers
       t.text :description
-      t.text :cost
+      t.integer :cost
 
       t.timestamps
     end

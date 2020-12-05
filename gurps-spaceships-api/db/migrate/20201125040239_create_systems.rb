@@ -9,6 +9,7 @@ class CreateSystems < ActiveRecord::Migration[6.0]
       t.integer :size_min, :default => 5
       t.integer :size_max, :default => 15
       t.text :cost
+      t.boolean :wspaces, :default => true
       t.boolean :superscience, :default => false
       t.integer :high_energy, :default => 0
       t.integer :power_points, :default => 0

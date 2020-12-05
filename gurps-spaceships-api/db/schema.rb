@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
     t.boolean "superscience", default: false
     t.text "modifiers"
     t.text "description"
-    t.text "cost"
+    t.integer "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
     t.integer "size_min", default: 5
     t.integer "size_max", default: 15
     t.text "cost"
+    t.boolean "wspaces", default: true
     t.boolean "superscience", default: false
     t.integer "high_energy", default: 0
     t.integer "power_points", default: 0

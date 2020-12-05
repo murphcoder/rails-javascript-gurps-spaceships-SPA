@@ -11,6 +11,7 @@ systems = [
         name: "Armor, Ice",
         tech_level: 0, 
         hull_placement: "hull", 
+        wspaces: false,
         modifiers: {
             us_ddr: {8 => 1, 9 => 2, 10 => 2, 11 => 3, 12 => 5, 13 => 7, 14 => 10, 15 => 15}
         },
@@ -22,6 +23,7 @@ systems = [
         name: "Armor, Stone",
         tech_level: 0,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {7 => 1, 8 => 2, 9 => 2, 10 => 3, 11 => 5, 12 => 7, 13 => 10, 14 => 15, 15 => 20}
         },
@@ -33,6 +35,7 @@ systems = [
         name: "Armor, Steel",
         tech_level: 7,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 1, 6 => 2, 7 => 3, 8 => 5, 9 => 7, 10 => 10, 11 => 15, 12 => 20, 13 => 30, 14 => 50, 15 => 70},
             sl_ddr: {6 => 1, 7 => 2, 8 => 3, 9 => 5, 10 => 7, 11 => 10, 12 => 15, 13 => 20, 14 => 30, 15 => 50}
@@ -45,6 +48,7 @@ systems = [
         name: "Armor, Light Alloy",
         tech_level: 7,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 2, 6 => 3, 7 => 5, 8 => 7, 9 => 10, 10 => 15, 11 => 20, 12 => 30, 13 => 50, 14 => 70, 15 => 100},
             sl_ddr: {5 => 1, 6 => 2, 7 => 3, 8 => 5, 9 => 7, 10 => 10, 11 => 15, 12 => 20, 13 => 30, 14 => 50, 15 => 70}
@@ -57,6 +61,7 @@ systems = [
         name: "Armor, Metallic Laminate",
         tech_level: 8,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 3, 6 => 5, 7 => 7, 8 => 10, 9 => 15, 10 => 20, 11 => 30, 12 => 50, 13 => 70, 14 => 100, 15 => 150},
             sl_ddr: {5 => 2, 6 => 3, 7 => 5, 8 => 7, 9 => 10, 10 => 15, 11 => 20, 12 => 30, 13 => 50, 14 => 70, 15 => 100}
@@ -69,6 +74,7 @@ systems = [
         name: "Armor, Advanced Metallic Laminate",
         tech_level: 9,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 5, 6 => 7, 7 => 10, 8 => 15, 9 => 20, 10 => 30, 11 => 50, 12 => 70, 13 => 100, 14 => 150, 15 => 200},
             sl_ddr: {5 => 3, 6 => 5, 7 => 7, 8 => 10, 9 => 15, 10 => 20, 11 => 30, 12 => 50, 13 => 70, 14 => 100, 15 => 150}
@@ -81,6 +87,7 @@ systems = [
         name: "Armor, Nanocomposite",
         tech_level: 10,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 7, 6 => 10, 7 => 15, 8 => 20, 9 => 30, 10 => 50, 11 => 70, 12 => 100, 13 => 150, 14 => 200, 15 => 300},
             sl_ddr: {5 => 5, 6 => 7, 7 => 10, 8 => 15, 9 => 20, 10 => 30, 11 => 50, 12 => 70, 13 => 100, 14 => 150, 15 => 200}
@@ -93,6 +100,7 @@ systems = [
         name: "Armor, Organic",
         tech_level: 10,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 2, 6 => 3, 7 => 5, 8 => 7, 9 => 10, 10 => 15, 11 => 20, 12 => 30, 13 => 50, 14 => 70, 15 => 100},
             sl_ddr: {5 => 1, 6 => 2, 7 => 3, 8 => 5, 9 => 7, 10 => 10, 11 => 15, 12 => 20, 13 => 30, 14 => 50, 15 => 70}
@@ -105,6 +113,7 @@ systems = [
         name: "Armor, Diamondoid",
         tech_level: 11,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 10, 6 => 15, 7 => 20, 8 => 30, 9 => 50, 10 => 70, 11 => 100, 12 => 150, 13 => 200, 14 => 300, 15 => 500},
             sl_ddr: {5 => 7, 6 => 10, 7 => 15, 8 => 20, 9 => 30, 10 => 50, 11 => 70, 12 => 100, 13 => 150, 14 => 200, 15 => 300}
@@ -117,6 +126,7 @@ systems = [
         name: "Armor, Exotic Laminate",
         tech_level: 12,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {
             us_ddr: {5 => 15, 6 => 20, 7 => 30, 8 => 50, 9 => 70, 10 => 100, 11 => 150, 12 => 200, 13 => 300, 14 => 500, 15 => 700},
             sl_ddr: {5 => 10, 6 => 15, 7 => 20, 8 => 30, 9 => 50, 10 => 70, 11 => 100, 12 => 150, 13 => 200, 14 => 300, 15 => 500}
@@ -128,6 +138,7 @@ systems = [
     {
         name: "Cargo Hold",
         modifiers: {cargo: {5 => 1.5, 6 => 5}},
+        wspaces: false,
         description: "This is ordinary cargo space. Each system is rated for tons of cargo capacity. The design table shows the capacity of cargo space. Cost is negligible."
     },
 
@@ -216,6 +227,7 @@ systems = [
         name: "External Clamp",
         tech_level: 7,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {clamp: true},
         description: "This is a system of clamps or grapples that allows the vessel to attach itself to another spacecraft or object that the vessel has rendezvoused with. Attachment takes at least 20 seconds; the subject must be cooperative or drifting. A clamped space- craft can be towed or pushed. To determine performance, calculate the tons of thrust. A vessel’s tons of thrust are equal to its acceleration (or FTL rating) times its mass. If it pulls or pushes a vessel or other heavy object (such as an asteroid) divide by their combined mass to get the new acceleration or rating. The two vessels may also combine their acceleration or FTL ratings: add their thrust or FTL rating together before dividing by combined mass.",
         cost: {5 => 3000, 6 => 10000}
@@ -307,6 +319,7 @@ systems = [
     {
         name: "Fuel Tank",
         modifiers: {fuel_tank: 1},
+        wspaces: false,
         description: "This is a full tank of reaction mass for a reaction drive. A spacecraft with one or more reaction drive engines requires at least one fuel tank with appropriate reaction mass to supply those drives. The more fuel tanks that can supply a particular reaction drive, the greater the ship’s delta-V, as indicated in each reaction drive engine description.",
         cost: {5 => 10000, 6 => 30000}
     },
@@ -375,6 +388,7 @@ systems = [
     {
         name: "Passenger Seating",
         modifiers: {sv: {5 => 2, 6 => 6}},
+        wspaces: false,
         description: "This is an alternative to a habitat for a short voyage or small spacecraft. The system contains a number of airliner-style passenger seats, separated by aisles. (Two seats may be replaced by one stabilized stretcher for casualty evacuation.) It includes 24 hours of limited life support per passenger seat or stretcher. The table shows number of seats.",
         cost: {5 => 10000, 6 => 30000}
     },
@@ -795,6 +809,7 @@ systems = [
         name: "Soft-Landing System",
         tech_level: 7,
         hull_placement: "hull",
+        wspaces: false,
         modifiers: {soft_landing: true},
         description: "A reentry shield, airbags, or parachutes designed to allow a vessel that lacks wings, thrust, or contragravity to safely land from low orbit. The system is deploys automatically and is destroyed after landing – it must be replaced each time it’s used.",
         cost: {5 => 50000, 6 => 100000}
@@ -804,6 +819,7 @@ systems = [
         name: "Solar Panel Array",
         tech_level: 7,
         hull_placement: "hull",
+        wspaces: false,
         power_points: 1,
         description: "A solar power system. If exposed to sunlight it generates one Power Point. A solar panel array is an exposed system and is not protected by spacecraft armor!",
         cost: {5 => 150000, 6 => 500000}
@@ -877,7 +893,8 @@ systems = [
         hull_placement: "hull",
         modifiers: {weapons: 10},
         description: "Uses the same rules as a major battery except the weapons are less powerful and there may be a mix of up to 10 fixed or turret mounted weapons in the battery.",
-        cost: {5 => 150000, 6 => 600000}
+        cost: {5 => 150000, 6 => 600000},
+        size_min: 6
     },
 
     {
@@ -885,7 +902,8 @@ systems = [
         hull_placement: "hull",
         modifiers: {weapons: 30},
         description: "Uses the same rules as a secondary battery except the weapons are less powerful and there may be any mix of up to 30 fixed or turret mounted weapons in the battery.",
-        cost: {5 => 150000, 6 => 600000}
+        cost: {5 => 150000, 6 => 600000},
+        size_min: 7
     }
 
 ]
@@ -948,13 +966,6 @@ features = [
         description: "Larger unstreamlined spacecraft may be designed so part or all of the ship can spin to simulate interior gravity via the Coriolis effect. The maximum gravity (G) possible is shown on the Spin Gravity Table; it can spin slower for lower G. Spin gravity does not provide simulated gravity to core systems. A spacecraft using spin gravity is a -2 on its Handling while spinning.",
         cost: {5 => 3000, 6 => 10000},
         size_min: 8
-    },
-
-    {
-        name: "Stealth",
-        modifiers: {stealth: {multiplier: 2, statistic: "tech level minus 6"}},
-        description: "The spacecraft hull is harder to detect with sensors. Subtract (TL-6) times 2 from rolls to detect it.",
-        cost: {5 => 180000, 6 => 350000, 7 => 700000, 8 => 1500000, 9 => 3500000, 10 => 7000000, 11 => 15000000, 12 => 35000000, 13 => 70000000, 14 => 150000000, 15 => 500000000}
     },
 
     {
@@ -1086,7 +1097,7 @@ habitats = [
         name: "Lab",
         size: 8,
         description: "A scientific laboratory usable by up to two peo- ple simultaneously. Fulfills equipment requirements for a scientific skill, e.g., Chemistry, Biology, Physics, or Science!, with a +1 equipment bonus. Each lab costs an extra $1M.",
-        cost: {any: 1000000}
+        cost: 1000000
     },
 
     {
@@ -1107,7 +1118,7 @@ habitats = [
         superscience: true,
         tech_level: 12,
         description: "A two-way matter trans- mitter capable of transmitting 1-2 persons or 0.2 tons cargo. Takes about 10 seconds to send or retrieve and requires an Electronics Operation (MT) skill roll to use properly (-1 per 1,000 miles range), failure meaning a near miss, critical failure disaster; add +4 if beaming between two cooperating systems. It can be controlled from the bay or a control station. See GURPS Ultra-Tech (p. UT233) for detailed rules. Costs an extra $20M. Half cost if it can only send or receive.",
-        cost: {any: 20000000}
+        cost: 20000000
     }
 
 ]
