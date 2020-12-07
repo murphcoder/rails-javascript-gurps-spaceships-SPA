@@ -387,6 +387,48 @@ class Spaceship {
 
     get load() {return this.cargo + 0.1 * (this.asv + this.sv + this.sleep)};
 
+    get forceField() {
+        return this.systems.filter(s => {return !!s.modifiers.force_ddr}).reduce(function(total, system) {
+            return total + system.modifiers.force_ddr[this.tech_level][this.size]
+        }.bind(this))
+    };
+
+    get airThrust() {
+        let aThrust;
+        this.systems.filter(s => {return !!s.modifiers.atmospheric_thrust}).reduce(function(total, system) {
+            aThrust = total + system.modifiers.atmospheric_thrust
+        }.bind(this));
+        return aThrust + this.totalThrust;
+    };
+
+    get airAccel() {
+        return airThrust * 10;
+    }
+
+    get airMove() {
+        let s;
+        if (this.streamlined) {s = 2500} else {s = 250};
+        return Math.round((Math.sqrt(this.airThrust) * s) * 100) / 100;
+    };
+
+    get airHnd() {
+        let ah = this.Hnd;
+        if (!!this.systems.find(s => {return s.modifiers.contragravity})) {
+            ah = ah + 2
+        };
+        if (!!this.features.find(f => {return f.name == "Winged"})) {
+            ah = ah + 4
+        };
+        if (ah > 5) {ah = 5};
+        return ah
+    };
+
+    get airSR() {
+        if (!!this.features.find(f => {return f.name == "Winged"})) {
+            return this.SR + 1;
+        } else {return this.SR}
+    }
+
 };
 
 class Hull {
