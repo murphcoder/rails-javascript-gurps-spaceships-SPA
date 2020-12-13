@@ -2,7 +2,7 @@ class CreateSystems < ActiveRecord::Migration[6.0]
   def change
     create_table :systems do |t|
       t.string :name
-      t.integer :tech_level
+      t.integer :tech_level, :default => 7
       t.string :hull_placement, :default => "any"
       t.text :description
       t.text :modifiers

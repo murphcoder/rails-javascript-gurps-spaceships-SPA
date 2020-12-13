@@ -1,8 +1,46 @@
+body {
+    font-family: 'falling_skiesregular', Arial, Helvetica, sans-serif;
+    background-image: url("assets/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    color: whitesmoke;
+}
+
+a {
+    color: ivory;
+}
+
 h1, h2 {
     text-align: center;
 }
 
-div.ship {
+div.upper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+div#rules {
+    display: inline-block;
+    visibility: hidden;
+}
+
+ul.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+ul.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: auto;
+}
+
+div#ship {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -10,20 +48,89 @@ div.ship {
     padding-top: 10px;
     padding-bottom: 30px;
     margin: 20px;
-  }
+    visibility: hidden;
+}
+
+div#stat_block {
+    visibility: hidden;
+    align-items: center;
+}
   
 div.card {
     background-color: #eeeeee;
+    color: black;
     box-shadow: 10px 10px grey;
     padding: 10px;
     border-radius: 10px;
-    align-items: center;
+    align-items: left;
+    width: 300px;
 }
 
-table {
-    margin-left: 40px;
+div.card a {
+    color: black;
 }
 
-table td {
+select.placement_choice {
+    width: 200px;
+    font-size: x-small;
+}
+
+.number {
+    width: 75px;
+}
+
+.description {
+    font-size: x-small;
+}
+
+table td, th {
     text-align: right;
+}
+
+table td a {
+    color: black;
+}
+
+table td.warning {
+    text-align: left;
+}
+
+div#desc_window {
+    visibility: hidden;
+    border-style: solid;
+    border-radius: 5%;
+    margin: 20px;
+    position: absolute;
+    background-color: ivory;
+    color: black;
+    top: 50px;
+    left: 25%;
+    width: 50%;
+    height: fit-content;
+}
+
+div#inner_window {
+    margin: 5%;
+}
+
+button#desc_button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+label#name_label {
+    text-align: center;
+}
+
+input#name {
+    width: 80%;
+}
+
+table#habitat_table {
+    margin-left: 35%;
+}
+
+button#delete {
+    position: relative;
+    right: -250px;
 }

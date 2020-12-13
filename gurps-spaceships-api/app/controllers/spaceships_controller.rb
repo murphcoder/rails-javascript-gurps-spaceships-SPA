@@ -2,7 +2,7 @@ class SpaceshipsController < ApplicationController
 
     def index
         spaceships = Spaceship.all
-        render json: spaceships.to_json(only: [:id, :name, :superscience, :tech_level, :created_at, :updated_at])
+        render json: SpaceshipSerializer.new(spaceships).serialized_json
     end
 
     def show
@@ -11,7 +11,6 @@ class SpaceshipsController < ApplicationController
     end
 
     def create
-        binding.pry
         spaceship = Spaceship.create(spaceship_params)
         render json: SpaceshipSerializer.new(spaceship).serialized_json
     end
@@ -31,7 +30,8 @@ class SpaceshipsController < ApplicationController
         spaceship.spaceship_switches.each {|switch| switch.destroy}
         spaceship.hulls.each {|hull| hull.destroy}
         spaceship.destroy
-        redirect_to _spaceships_path
+        spaceships = Spaceship.all
+        render json: SpaceshipSerializer.new(spaceships).serialized_json
     end
 
     private
@@ -51,19 +51,23 @@ class SpaceshipsController < ApplicationController
             hulls_attributes: [
                 :id,
                 :section,
+                :spaceship_id,
                 placements_attributes: [
                     :id,
                     :location,
                     :system_id,
                     :fuel,
+                    :hull_id,
                     weapon_mounts_attributes: [
                         :id,
                         :weapon_id,
-                        :kind
+                        :kind,
+                        :placement_id
                     ],
                     habitat_spaces_attributes: [
                         :id,
-                        :habitat_id
+                        :habitat_id,
+                        :placement_id
                     ]
                 ]
             ]

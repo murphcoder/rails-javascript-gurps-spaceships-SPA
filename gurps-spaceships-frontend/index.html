@@ -6,28 +6,107 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GURPS Spaceships Construction Program</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/webfontkit/stylesheet.css">
 </head>
 <body>
-  <header><h1>Let's Build A Spaceship!</h1></header>
+  <header><h1 id="head">Let's Build A Spaceship!</h1></header>
 
   <main>
-    <div class="rules">
-      <ul>
-        <li>Superscience</li>
-        <li>Pickle</li>
-      </ul>
+    <div id="desc_window" class="desc">
+      <button id="desc_button">Close</button>
+      <div id="inner_window">
+        <div id="inner_desc">
+          <h4 id="desc_name"></h4>
+          <p id="main_desc"></p>
+        </div>
+        <div id="habitat_window"></div>
+        <div id="weapon_window"></div>
+      </div>
     </div>
-    <div class="ship">
+    <div class="upper">
+      <div class="rules" id="rules">
+      <h3>Select Switches And Features</h3>
+      <p>
+        <h4>Switches</h4>
+        <ul class="rules list" id="rules_list">
+          
+        </ul>
+      </p>
+      <p>
+        <h4>Features</h4>
+        <ul class="features list" id="features_list">
+        </ul>
+      </p>
+      </div>
+      <div class="right">
+        <div class="start">
+          <h3>Select A Spaceship From Below To Modify Or Click "New Ship".</h3>
+          <p>
+            <select id="ship_list" name="ship_list">
+            </select>
+          </p>
+          <button id="new">New Ship</button><button id="delete">Delete Ship</button><button id="save">Save Ship</button>
+        </div>
+        <div id="stat_block">
+          <p><label for="name" id="name_label">Name : </label><input type="text" id="name"></input></p>
+          <ul class="stats">
+            <li><input type="checkbox" id="streamlined">Streamlined?</li>
+            <li><input type="checkbox" id="superscience">Superscience?</li>
+            <li>TL : <select id="tech_level">
+              <option id="tl7" value="7">7</option>
+              <option id="tl8" value="8">8</option>
+              <option id="tl9" value="9">9</option>
+              <option id="tl10" value="10">10</option>
+              <option id="tl11" value="11">11</option>
+              <option id="tl12" value="12">12</option>
+            </select></li>
+            <li>Size : <select id="size">
+              <option id="s5" value="5">5</option>
+              <option id="s6" value="6">6</option>
+              <option id="s7" value="7">7</option>
+              <option id="s8" value="8">8</option>
+              <option id="s9" value="9">9</option>
+              <option id="s10" value="10">10</option>
+              <option id="s11" value="11">11</option>
+              <option id="s12" value="12">12</option>
+              <option id="s13" value="13">13</option>
+              <option id="s14" value="14">14</option>
+              <option id="s15" value="15">15</option>
+            </select></li>
+            <li> Cost : <nobr id="cost"></nobr></li>
+            <li>dST : <nobr id="dst"></nobr></li>
+            <li>HP : <nobr id="hp"></nobr></li>
+            <li>HT : <nobr id="ht"></nobr></li>
+            <li>Hnd : <nobr id="hnd"></nobr></li>
+            <li>SR : <nobr id="sr"></nobr></li>
+            <li>Thrust : <nobr id='g'></nobr></li>
+            <li>Range : <nobr id="range"></nobr></li>
+            <li>Weight : <nobr id="weight"></nobr></li>
+            <li>dDR : <nobr id="ddr"></nobr></li>
+            <li>Occ : <nobr id="occ"></nobr></li>
+            <li>Load : <nobr id="load"></nobr></li>
+          </ul>
+          <h4>Air Stats</h4>
+          <ul class="stats">
+            <li>Accel : <nobr id="air_accel"></nobr></li>
+            <li>Move : <nobr id="air_move"></nobr></li>
+            <li>Hnd : <nobr id="air_hnd"></nobr></li>
+            <li>SR : <nobr id="air_sr"></nobr></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ship" id="ship">
       <div class="card">
         <h2>Front</h2>
         <table>
-          <tr><td>1:</td></tr>
-          <tr><td>2:</td></tr>
-          <tr><td>3:</td></tr>
-          <tr><td>4:</td></tr>
-          <tr><td>5:</td></tr>
-          <tr><td>6:</td></tr>
-          <tr><td>Core:</td></tr>
+          <tr><td class="number">1:</td><td id="front_1_info"><select id="front_1" class="placement_choice"></select></td></tr>
+          <tr><td class="number">2:</td><td id="front_2_info"><select id="front_2" class="placement_choice"></select></td></tr>
+          <tr><td class="number">3:</td><td id="front_3_info"><select id="front_3" class="placement_choice"></select></td></tr>
+          <tr><td class="number">4:</td><td id="front_4_info"><select id="front_4" class="placement_choice"></select></td></tr>
+          <tr><td class="number">5:</td><td id="front_5_info"><select id="front_5" class="placement_choice"></select></td></tr>
+          <tr><td class="number">6:</td><td id="front_6_info"><select id="front_6" class="placement_choice"></select></td></tr>
+          <tr id="top_front_core"><td id="front_core" class="number">Core: <input type="checkbox" id="cb_front" class="core_checks"></td></tr>
         </table>
         <br>
       </div>
@@ -35,26 +114,26 @@
       <div class="card">
         <h2>Center</h2>
         <table>
-          <tr><td>1:</td></tr>
-          <tr><td>2:</td></tr>
-          <tr><td>3:</td></tr>
-          <tr><td>4:</td></tr>
-          <tr><td>5:</td></tr>
-          <tr><td>6:</td></tr>
-          <tr><td>Core:</td></tr>
+          <tr><td class="number">1:</td><td id="center_1_info"><select id="center_1" class="placement_choice"></select></td></tr>
+          <tr><td class="number">2:</td><td id="center_2_info"><select id="center_2" class="placement_choice"></select></td></tr>
+          <tr><td class="number">3:</td><td id="center_3_info"><select id="center_3" class="placement_choice"></select></td></tr>
+          <tr><td class="number">4:</td><td id="center_4_info"><select id="center_4" class="placement_choice"></select></td></tr>
+          <tr><td class="number">5:</td><td id="center_5_info"><select id="center_5" class="placement_choice"></select></td></tr>
+          <tr><td class="number">6:</td><td id="center_6_info"><select id="center_6" class="placement_choice"></select></td></tr>
+          <tr id="top_center_core"><td id="center_core" class="number">Core: <input type="checkbox" id="cb_center" class="core_checks"></td></tr>
         </table>
       </div>
 
       <div class="card">
         <h2>Rear</h2>
         <table>
-          <tr><td>1:</td></tr>
-          <tr><td>2:</td></tr>
-          <tr><td>3:</td></tr>
-          <tr><td>4:</td></tr>
-          <tr><td>5:</td></tr>
-          <tr><td>6:</td></tr>
-          <tr><td>Core:</td></tr>
+          <tr><td class="number">1:</td><td id="rear_1_info"><select id="rear_1" class="placement_choice"></select></td></tr>
+          <tr><td class="number">2:</td><td id="rear_2_info"><select id="rear_2" class="placement_choice"></select></td></tr>
+          <tr><td class="number">3:</td><td id="rear_3_info"><select id="rear_3" class="placement_choice"></select></td></tr>
+          <tr><td class="number">4:</td><td id="rear_4_info"><select id="rear_4" class="placement_choice"></select></td></tr>
+          <tr><td class="number">5:</td><td id="rear_5_info"><select id="rear_5" class="placement_choice"></select></td></tr>
+          <tr><td class="number">6:</td><td id="rear_6_info"><select id="rear_6" class="placement_choice"></select></td></tr>
+          <tr id="top_rear_core"><td id="rear_core" class="number">Core: <input type="checkbox" id="cb_rear" class="core_checks"></td></tr>
         </table>
       </div>
     </div>

@@ -955,12 +955,6 @@ features = [
     },
 
     {
-        name: "Ram-Rockets",
-        description: "The nuclear thermal rocket, antimatter thermal rocket, fusion torch, super fusion torch, antimatter plasma torch, and super antimatter plasma torch drives may have an auxiliary air-breathing air-ram mode for atmosphere. They suck in air with a turbine, heat it using their onboard drive reactor, and expel it for thrust. Thus, they don’t require fuel while flying in an atmosphere (breathable or otherwise) provided it is “very thin” or greater density (see p. B429). Multiply cost by 5.",
-        cost: {multiplier: 5, statistic: "engine cost"}
-    },
-
-    {
         name: "Spin Gravity",
         modifiers: {gravity: true},
         description: "Larger unstreamlined spacecraft may be designed so part or all of the ship can spin to simulate interior gravity via the Coriolis effect. The maximum gravity (G) possible is shown on the Spin Gravity Table; it can spin slower for lower G. Spin gravity does not provide simulated gravity to core systems. A spacecraft using spin gravity is a -2 on its Handling while spinning.",

@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
   create_table "systems", force: :cascade do |t|
     t.string "name"
-    t.integer "tech_level"
+    t.integer "tech_level", default: 7
     t.string "hull_placement", default: "any"
     t.text "description"
     t.text "modifiers"

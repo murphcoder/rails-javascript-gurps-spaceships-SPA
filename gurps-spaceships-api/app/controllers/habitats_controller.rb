@@ -6,7 +6,7 @@ class HabitatsController < ApplicationController
     end
 
     def show
-        feature = Habitat.find(params[:id])
+        habitat = Habitat.find(params[:id])
         render json: habitat.to_json(except: [:created_at, :updated_at])
     end
 
