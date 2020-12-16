@@ -7,6 +7,9 @@ class Weapon {
         this.superscience = superscience;
         this.description = description;
         this.high_energy = high_energy;
-        weaponList.push(this);
-    }
+        Weapon.list.push(this);
+    };
+
+    static list = []
+
 }

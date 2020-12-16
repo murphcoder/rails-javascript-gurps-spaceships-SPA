@@ -36,6 +36,9 @@ class System {
         this.suppliable = suppliable;
         this.volatile = volatile;
         this.delta_v = delta_v;
-        systemList.push(this);
-    }
+        System.list.push(this);
+    };
+
+    static list = []
+
 }

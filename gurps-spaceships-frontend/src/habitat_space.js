@@ -5,12 +5,14 @@ class HabitatSpace {
         this.placement_id = placement_id;
     };
 
+    static list = [];
+
     get placement() {
-        return placementList.find(function(placement) {return placement.id == this}, this.placement_id);
+        return Placement.list.find(function(placement) {return placement.id == this}, this.placement_id);
     };
 
     get habitat() {
-        return habitatList.find(function(habitat) {return habitat.id == this}, this.habitat_id);
+        return Habitat.list.find(function(habitat) {return habitat.id == this}, this.habitat_id);
     };
 
     get cost() {

@@ -5,6 +5,9 @@ class Rule {
         this.superscience = superscience;
         this.modifiers = modifiers;
         this.description = description;
-        rulesList.push(this)
-    }
+        Rule.list.push(this)
+    };
+
+    static list = []
+
 }

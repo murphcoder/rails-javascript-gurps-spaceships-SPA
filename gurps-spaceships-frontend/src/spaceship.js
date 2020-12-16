@@ -4,7 +4,7 @@ class Spaceship {
         tech_level, 
         size, 
         streamlined, 
-        superscience, 
+        superscience
     ) {
         this.id = id;
         this.name = name;
@@ -17,9 +17,17 @@ class Spaceship {
         this.rule_ids = []
     };
 
+    static list = [];
+
+    static current = null;
+
     get hulls() {
         return this.hulls_attributes;
     };
+
+    set hulls(newHulls) {
+        this.hulls_attributes = newHulls;
+    }
 
     get front() {
         return this.hulls.find(function(hull) {return hull.section === "front"});
@@ -42,11 +50,11 @@ class Spaceship {
     };
 
     get features() {
-        return featureList.filter(function(feature) {return this.feature_ids.includes(feature.id)}.bind(this))
+        return Feature.list.filter(function(feature) {return this.feature_ids.includes(feature.id)}.bind(this))
     };
 
     get rules() {
-        return rulesList.filter(function(rule) {return this.rule_ids.includes(rule.id)}.bind(this))
+        return Rule.list.filter(function(rule) {return this.rule_ids.includes(rule.id)}.bind(this))
     };
 
     get workspaces() {
@@ -88,7 +96,7 @@ class Spaceship {
                         break;
                     }
                 } else {
-                    return total + progression(feature.cost, this.size)
+                    return total + App.progression(feature.cost, this.size)
                 }
             } else {return 0}
         }.bind(this), 0)
@@ -207,7 +215,7 @@ class Spaceship {
     };
 
     get loadWeight() {
-        return progression({5: 30, 6: 100}, this.size)
+        return App.progression({5: 30, 6: 100}, this.size)
     };
 
     occ(stat) {
@@ -251,7 +259,7 @@ class Spaceship {
     get airThrust() {
         let aThrust;
         let arr = this.systems.filter(s => {if (!!s) {return !!s.modifiers.atmospheric_thrust} else {return false}})
-        if (empty(arr)) {aThrust = 0} else {aThrust = arr.reduce(function(total, system) {
+        if (App.empty(arr)) {aThrust = 0} else {aThrust = arr.reduce(function(total, system) {
             return total + system.modifiers.atmospheric_thrust
         }.bind(this))};
         return aThrust + this.totalThrust;

@@ -9,6 +9,9 @@ class Feature {
         this.cost = cost;
         this.size_min = size_min;
         this.size_max = size_max;
-        featureList.push(this)
-    }
+        Feature.list.push(this)
+    };
+
+    static list = []
+
 }

@@ -9,12 +9,14 @@ class Placement {
         this.weapon_mounts_attributes = []
     };
 
+    static list = [];
+
     get system() {
-        return systemList.find(function(system) {return system.id == this}, this.system_id);
+        return System.list.find(function(system) {return system.id == this}, this.system_id);
     };
 
     get hull() {
-        return hullList.find(function(hull) {return hull.id == this}, this.hull_id);
+        return Hull.list.find(function(hull) {return hull.id == this}, this.hull_id);
     };
 
     get section() {
@@ -80,7 +82,7 @@ class Placement {
 
     get habitatsFull () {
         function countHabitats(total, habitat) {total + habitat.size};
-        if (empty(this.habitats)) {return true} else {
+        if (App.empty(this.habitats)) {return true} else {
             return this.habitatSize <= this.habitats.reduce(countHabitats, 0)
         }
     };
@@ -104,10 +106,10 @@ class Placement {
 
     get cost () {
         if (!!this.system) {
-            let base = progression(this.system.cost, this.spaceship.size);
-            if (!empty(this.weaponMounts)) {
+            let base = App.progression(this.system.cost, this.spaceship.size);
+            if (!App.empty(this.weaponMounts)) {
                 return (base * (this.trueWeapons / this.weaponMounts.length))
-            } else if (!empty(this.habitatSpaces)) {
+            } else if (!App.empty(this.habitatSpaces)) {
                 return (this.extraHabitatCost + base)
             } else {return base}
         } else {return 0}
@@ -123,7 +125,7 @@ class Placement {
 
     get sv () {
         if (!!this.system && !!this.system.modifiers.sv) {
-            return progression(this.system.modifiers.sv, this.size)
+            return App.progression(this.system.modifiers.sv, this.size)
         } else {return 0};
     };
 
@@ -138,8 +140,8 @@ class Placement {
     get cargo() {
         if (!!this.system) {
             let cg = 0;
-            if (!empty(this.system.modifiers.cargo)) {
-                cg = cg + progression(this.system.modifiers.cargo, this.size)
+            if (!App.empty(this.system.modifiers.cargo)) {
+                cg = cg + App.progression(this.system.modifiers.cargo, this.size)
             };
             if (!!this.habitatSpaces.length) {
                 let hc = this.habitatSpaces.filter(s => {return s.habitat.modifiers.cargo}).reduce(function(total, space) {
@@ -148,7 +150,7 @@ class Placement {
                 cg = cg + hc
             };
             if (!!(this.weaponSize - this.trueWeapons)) {
-                let w = (progression({5: 1.5, 6: 5}, this.size) * (this.trueWeapons / this.weaponsSize));
+                let w = (App.progression({5: 1.5, 6: 5}, this.size) * (this.trueWeapons / this.weaponsSize));
                 w = Math.round(w * 2) / 2;
                 cg = cg + w
             };

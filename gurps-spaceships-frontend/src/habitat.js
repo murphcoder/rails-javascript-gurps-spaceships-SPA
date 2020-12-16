@@ -8,6 +8,8 @@ class Habitat {
         this.modifiers = modifiers;
         this.description = description;
         this.cost = cost;
-        habitatList.push(this);
-    }
+        Habitat.list.push(this);
+    };
+
+    static list = []
 }

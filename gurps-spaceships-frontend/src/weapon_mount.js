@@ -6,8 +6,10 @@ class WeaponMount {
         this.kind = kind;
     };
 
+    static list = [];
+
     get beamOutput() {
-        return progression({5: 10000000, 6: 30000000}, this.weaponSize);
+        return App.progression({5: 10000000, 6: 30000000}, this.weaponSize);
     };
 
     get damage() {
@@ -192,11 +194,11 @@ class WeaponMount {
     };
 
     get placement() {
-        return placementList.find(function(placement) {return placement.id == this}, this.placement_id);
+        return Placement.list.find(function(placement) {return placement.id == this}, this.placement_id);
     };
 
     get weapon() {
-        return weaponList.find(function(weapon) {return weapon.id == this}, this.weapon_id);
+        return Weapon.list.find(function(weapon) {return weapon.id == this}, this.weapon_id);
     };
 
     get true() {

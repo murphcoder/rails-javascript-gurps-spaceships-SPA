@@ -6,8 +6,10 @@ class Hull {
         this.placements_attributes = [];
     };
 
+    static list = [];
+
     get spaceship() {
-        return spaceshipList.find(function(ship) {return ship.id == this}, this.spaceship_id);
+        return Spaceship.list.find(function(ship) {return ship.id == this}, this.spaceship_id);
     };
 
     get placements() {
