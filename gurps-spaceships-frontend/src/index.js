@@ -13,6 +13,7 @@ function makeSpaceships(shipData) {
 };
 
 function makeSpaceship(object, ship = new Spaceship()) {
+    console.log(object);
     Object.keys(object).forEach(function(key) {
         if (object[key] != null && object[key].constructor != Array) {
             ship[key] = object[key]
@@ -116,7 +117,7 @@ function postSpaceship(ship) {
     };
     fetch(`${BASE_URL}/spaceships`, configObj)
     .then(resp => resp.json())
-    .then(json => listSpaceship(makeSpaceship(json, ship)));
+    .then(json => reloadSpaceship(makeSpaceship(json), true));
 };
 
 function saveSpaceship(ship) {
@@ -130,10 +131,11 @@ function saveSpaceship(ship) {
     };
     fetch(`${BASE_URL}/spaceships/${ship.id}`, configObj)
     .then(resp => resp.json())
-    .then(json => makeSpaceship(json, ship));
+    .then(json => reloadSpaceship(makeSpaceship(json, ship)));
 };
 
 function deleteSpaceship(ship) {
+    document.getElementById(`ship_${ship.id}`).remove();
     let configObj = {
         method: "DELETE",
         headers: {
@@ -148,14 +150,12 @@ function deleteSpaceship(ship) {
     .then(removeSpaceship());
 };
 
-function reloadSpaceship(object) {
+function reloadSpaceship(ship, knew = false) {
     let window = document.getElementById('desc_window');
     let message = document.getElementById('desc_name');
     message.innerText = 'Spaceship Saved!';
+    if (knew) {listSpaceship(ship)};
     window.style.visibility = 'visible';
-    let id = object.id;
-    makeSpaceships()
-    let ship = spaceshipList.find(s => {s.id == id});
     displaySpaceship(ship)
 };
 
@@ -529,7 +529,6 @@ function buildMenu(hull, i, options) {
             let arr = menu.id.split('_');
             let v = menu.value;
             let place = currentShip[arr[0]].location(arr[1]);
-            console.log(currentShip);
             place.system_id = parseInt(v, 10);
             updateStats();
         }
