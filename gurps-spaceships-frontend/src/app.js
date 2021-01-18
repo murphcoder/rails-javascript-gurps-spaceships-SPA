@@ -1,7 +1,7 @@
 class App {
     constructor() {};
 
-    static BASE_URL = "http://localhost:3000";
+    static BASE_URL = "https://spaceship-builder.herokuapp.com/";
 
     static objectToInstance(object, klass) {
         let instance = new klass();
