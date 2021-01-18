@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "features", force: :cascade do |t|
     t.string "name"
     t.integer "tech_level"
@@ -26,8 +29,8 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
   end
 
   create_table "habitat_spaces", force: :cascade do |t|
-    t.integer "habitat_id"
-    t.integer "placement_id"
+    t.bigint "habitat_id"
+    t.bigint "placement_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["habitat_id"], name: "index_habitat_spaces_on_habitat_id"
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
   create_table "hulls", force: :cascade do |t|
     t.string "section"
-    t.integer "spaceship_id"
+    t.bigint "spaceship_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["spaceship_id"], name: "index_hulls_on_spaceship_id"
@@ -56,8 +59,8 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
   create_table "placements", force: :cascade do |t|
     t.integer "location"
-    t.integer "hull_id"
-    t.integer "system_id"
+    t.bigint "hull_id"
+    t.bigint "system_id"
     t.string "fuel"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -66,8 +69,8 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
   end
 
   create_table "spaceship_features", force: :cascade do |t|
-    t.integer "spaceship_id"
-    t.integer "feature_id"
+    t.bigint "spaceship_id"
+    t.bigint "feature_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["feature_id"], name: "index_spaceship_features_on_feature_id"
@@ -75,8 +78,8 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
   end
 
   create_table "spaceship_switches", force: :cascade do |t|
-    t.integer "spaceship_id"
-    t.integer "switch_id"
+    t.bigint "spaceship_id"
+    t.bigint "switch_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["spaceship_id"], name: "index_spaceship_switches_on_spaceship_id"
@@ -126,8 +129,8 @@ ActiveRecord::Schema.define(version: 2020_11_27_091042) do
 
   create_table "weapon_mounts", force: :cascade do |t|
     t.string "kind"
-    t.integer "weapon_id"
-    t.integer "placement_id"
+    t.bigint "weapon_id"
+    t.bigint "placement_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["placement_id"], name: "index_weapon_mounts_on_placement_id"
